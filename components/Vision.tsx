@@ -12,19 +12,19 @@ export default function Vision() {
     <section className="py-24 lg:py-40 bg-zinc-950 relative overflow-hidden">
       <ScrollAnimation>
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-gold/5 blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-accent/5 blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-10 text-center">
 
         <div className="flex items-center justify-center gap-3 mb-6">
-          <div className="h-px w-8 bg-gold" />
-          <span className="font-mono text-[11px] tracking-[0.25em] uppercase text-gold">Long-Term Vision</span>
-          <div className="h-px w-8 bg-gold" />
+          <div className="h-px w-8 bg-accent" />
+          <span className="font-mono text-[11px] tracking-[0.25em] uppercase text-accent">Long-Term Vision</span>
+          <div className="h-px w-8 bg-accent" />
         </div>
 
         <h2 className="font-display font-extrabold text-[clamp(48px,8vw,110px)] leading-[0.9] tracking-tight text-white mb-6">
           IDEAS BUILT<br />INTO{" "}
-          <span className="text-gold">REAL</span><br />
+          <span className="text-accent">REAL</span><br />
           SYSTEMS.
         </h2>
 
@@ -37,7 +37,7 @@ export default function Vision() {
           {visionItems.map((item) => (
             <div
               key={item.label}
-              className="flex items-center gap-3 bg-zinc-900/60 border border-white/5 rounded-full px-6 py-3 hover:border-gold/20 transition-colors"
+              className="flex items-center gap-3 bg-zinc-900/60 border border-white/5 rounded-full px-6 py-3 hover:border-accent/20 transition-colors"
             >
               <span className="text-lg">{item.icon}</span>
               <span className="font-mono text-[11px] tracking-widest uppercase text-zinc-300">{item.label}</span>
@@ -50,7 +50,7 @@ export default function Vision() {
           <blockquote className="font-display font-extrabold text-[clamp(28px,4vw,52px)] text-white leading-tight">
             &ldquo;We don&apos;t just teach.
             <br />
-            <span className="text-gold">We build.&rdquo;</span>
+            <span className="text-accent">We build.&rdquo;</span>
           </blockquote>
           <p className="font-mono text-[11px] tracking-widest uppercase text-zinc-500 mt-5">
             — CareerBuild Studio

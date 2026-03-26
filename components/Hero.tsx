@@ -128,11 +128,11 @@ export default function Hero() {
             className="relative opacity-0 translate-y-6 transition-all duration-700 ease-out flex items-center justify-center"
           >
             {/* Decorative frame lines */}
-            <div className="absolute -top-4 -left-4 w-16 h-16 border-t border-l border-gold/40 pointer-events-none" />
-            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b border-r border-gold/40 pointer-events-none" />
-
+            <div className="absolute -top-4 -left-4 w-16 h-16 border-t border-l border-accent pointer-events-none" />
+            <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b border-r border-accent pointer-events-none" />
+            
             {/* Gold accent bar */}
-            <div className="absolute left-0 top-8 bottom-8 w-[2px] bg-gradient-to-b from-transparent via-gold/60 to-transparent" />
+            <div className="absolute left-0 top-8 bottom-8 w-[2px] bg-gradient-to-b from-transparent via-accent to-transparent" />
 
             {/* Image container */}
             <div className="relative w-full aspect-[4/5] lg:aspect-[4/5] max-h-[400px] lg:max-h-[620px] overflow-hidden">
@@ -140,7 +140,6 @@ export default function Hero() {
               <Image
                 src="/images/build.jpg"
                 fill
-                
                 alt="Builders Lab — real people building real skills"
                 className="w-full h-full object-cover object-center grayscale contrast-[1.1] brightness-90"
                 style={{

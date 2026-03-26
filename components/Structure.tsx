@@ -1,5 +1,8 @@
+"use client";
+import { useState } from "react";
 import { FaBookOpen, FaFlask, FaSearch, FaUsers } from "react-icons/fa";
 import ScrollAnimation from "./ScrollAnimation";
+
 const steps = [
   {
     num: "01",
@@ -28,6 +31,8 @@ const steps = [
 ];
 
 export default function Structure() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   return (
     <section id="structure" className="py-24 lg:py-36 bg-zinc-950">
       <ScrollAnimation>
@@ -40,22 +45,33 @@ export default function Structure() {
 
         <h2 className="font-display font-extrabold text-[clamp(36px,5vw,72px)] leading-[0.93] tracking-tight text-white mb-16">
           THE WEEKLY<br />
-          <span className="text-gold">CYCLE</span>
+          <span className="text-accent">CYCLE</span>
         </h2>
 
         {/* Steps */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, i) => (
-            <div key={step.num} className="relative group">
+            <div 
+              key={step.num} 
+              className="relative group"
+              onMouseEnter={() => setHoveredIndex(i)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
               {/* Connector line */}
               {i < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-[calc(100%+12px)] w-[calc(100%-24px)] h-px bg-gradient-to-r from-gold/30 to-transparent z-10" />
+                <div className="hidden lg:block absolute top-8 left-[calc(100%+12px)] w-[calc(100%-24px)] h-px bg-linear-to-r from-gold/30 to-transparent z-10" />
               )}
 
-              <div className="bg-zinc-900/40 border border-white/5 rounded-2xl p-6 hover:border-gold/20 hover:bg-zinc-900/70 transition-all duration-300 h-full">
+              <div className={`transition-all duration-500 h-full rounded-2xl p-6 border ${
+                hoveredIndex === null 
+                  ? "bg-zinc-900/40 border-white/5" 
+                  : hoveredIndex === i 
+                    ? "bg-zinc-900/80 border-accent/40 shadow-[0_0_30px_rgba(212,175,55,0.1)] scale-[1.02]" 
+                    : "bg-zinc-900/20 border-white/5 opacity-40 grayscale-[0.5] scale-[0.98]"
+              }`}>
                 {/* Step number + icon */}
                 <div className="flex items-start justify-between mb-5">
-                  <span className="text-2xl">{step.icon}</span>
+                  <span className={`text-2xl transition-colors duration-500 ${hoveredIndex === i ? "text-accent" : "text-white"}`}>{step.icon}</span>
                   <span className="font-mono text-[10px] tracking-widest text-zinc-600 bg-zinc-900 px-2 py-1 rounded">
                     /{step.num}
                   </span>
@@ -79,7 +95,7 @@ export default function Structure() {
                 key={word}
                 className="flex items-center gap-3 bg-zinc-900 border border-white/5 rounded-full px-5 py-2.5"
               >
-                <div className="w-1.5 h-1.5 bg-gold rotate-45 shrink-0" />
+                <div className="w-1.5 h-1.5 bg-accent rotate-45 shrink-0" />
                 <span className="font-display font-bold text-sm text-white tracking-wide">{word}</span>
               </div>
             ))}

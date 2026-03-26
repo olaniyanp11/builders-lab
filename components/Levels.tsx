@@ -50,12 +50,12 @@ export default function Levels() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         <div className="flex items-center gap-3 mb-5">
-          <div className="h-px w-8 bg-gold" />
-          <span className="font-mono text-[11px] tracking-[0.25em] uppercase text-gold">Community Structure</span>
+          <div className="h-px w-8 bg-accent" />
+          <span className="font-mono text-[11px] tracking-[0.25em] uppercase text-accent">Community Structure</span>
         </div>
 
         <h2 className="font-display font-extrabold text-[clamp(36px,5vw,72px)] leading-[0.93] tracking-tight text-white mb-4">
-          YOU&apos;RE NOT A <span className="text-gold">STUDENT.</span><br />
+          YOU&apos;RE NOT A <span className="text-accent">STUDENT.</span><br />
           YOU&apos;RE A BUILDER.
         </h2>
 
@@ -69,17 +69,17 @@ export default function Levels() {
               key={level.title}
               className={`relative rounded-2xl p-8 border transition-all duration-300 ${
                 level.featured
-                  ? "bg-gradient-to-b from-zinc-800/80 to-zinc-900 border-gold/30 shadow-[0_0_40px_rgba(201,168,76,0.08)]"
+                  ? "bg-gradient-to-b from-zinc-800/80 to-zinc-900 border-accent/30 shadow-[0_0_40px_rgba(201,168,76,0.08)]"
                   : "bg-zinc-900/40 border-white/5 hover:border-white/10"
               }`}
             >
               {level.featured && (
-                <div className="absolute -top-px left-6 right-6 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
+                <div className="absolute -top-px left-6 right-6 h-px bg-gradient-to-r from-transparent via-accent to-transparent" />
               )}
 
               {level.featured && (
                 <div className="absolute top-4 right-4">
-                  <span className="font-mono text-[9px] tracking-widest uppercase bg-gold text-zinc-950 px-2.5 py-1 font-medium">
+                  <span className="font-mono text-[9px] tracking-widest uppercase bg-accent text-zinc-950 px-2.5 py-1 font-medium">
                     Most Active
                   </span>
                 </div>
@@ -90,14 +90,14 @@ export default function Levels() {
               <h3 className={`font-display font-bold text-2xl mb-1 ${level.featured ? "text-white" : "text-white"}`}>
                 {level.title}
               </h3>
-              <p className="font-mono text-[10px] tracking-widest uppercase text-gold mb-7">
+              <p className="font-mono text-[10px] tracking-widest uppercase text-accent mb-7">
                 {level.sub}
               </p>
 
               <ul className="space-y-3.5">
                 {level.perks.map((perk) => (
                   <li key={perk} className="flex items-start gap-3 text-sm text-zinc-400 font-light">
-                    <span className={`mt-1 shrink-0 font-mono text-xs ${level.featured ? "text-gold" : "text-zinc-600"}`}>
+                    <span className={`mt-1 shrink-0 font-mono text-xs ${level.featured ? "text-accent" : "text-zinc-600"}`}>
                       <FaStar />
                     </span>
                     {perk}
@@ -111,7 +111,7 @@ export default function Levels() {
         <div className="mt-10 text-center">
           <p className="font-mono text-[11px] tracking-widest uppercase text-zinc-500">
             Progression Based On:{" "}
-            <span className="text-gold">Participation · Execution · Output</span>
+            <span className="text-accent">Participation · Execution · Output</span>
           </p>
           </div>
           </div>

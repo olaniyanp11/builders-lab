@@ -7,8 +7,16 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --animate-marquee: marquee 35s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +32,7 @@
   --font-syne: 'Syne', sans-serif;
   --font-outfit: 'Outfit', sans-serif;
   --font-jetbrains: 'JetBrains Mono', monospace;
+  --accent: #D4AF37;
 }
 
 html { scroll-behavior: smooth; }
