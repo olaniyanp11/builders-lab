@@ -154,7 +154,7 @@ export default function Hero() {
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
                 <div className="flex flex-col gap-0.5">
                   <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-gold">
-                    Cohort 2025
+                    Cohort {new Date().toLocaleDateString()}
                   </span>
                   <span className="font-display font-bold text-white text-sm leading-tight">
                     Build. Ship. Scale.

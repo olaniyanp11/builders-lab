@@ -98,7 +98,7 @@ export default function About() {
                         THE LAB
                       </span>
                       <span className="font-mono text-[9px] tracking-widest text-zinc-500 uppercase">
-                        Est. 2025
+                        Est. {new Date().toLocaleDateString()}
                       </span>
                     </div>
                   </div>

@@ -31,13 +31,15 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <Image
-            width={100}
-            height={100}
-            alt="logo"
-            src={"/images/career-logo.png"}
-          />
+        <Link href="/" className="flex items-center gap-2  group">
+          <div className="relative w-10 h-10">
+            <Image
+              fill
+              alt="logo"
+              src={"/images/career-logo.png"}
+              className="object-contain"
+            />
+          </div>
           {/* <div className="w-7 h-7 border border-gold/60 rotate-45 flex items-center justify-center group-hover:border-gold transition-colors">
             <div className="w-2.5 h-2.5 bg-gold rotate-0" />
           </div> */}
@@ -72,13 +74,32 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className={`md:hidden relative w-12 h-12 flex items-center justify-center rounded-full transition-colors duration-300 group
+    ${open ? "bg-accent/15" : "hover:bg-accent/15 active:bg-accent/15"}`}
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
-          <span className={`block h-px w-6 bg-white transition-all ${open ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block h-px w-6 bg-white transition-all ${open ? "opacity-0" : ""}`} />
-          <span className={`block h-px w-6 bg-white transition-all ${open ? "-rotate-45 -translate-y-2" : ""}`} />
+          {/* Rotating ring */}
+          <span
+            className={`absolute inset-0 rounded-full border transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]
+    ${open ? "border-accent/35 rotate-90 scale-105 bg-transparent" : "border-transparent"}`}
+          />
+
+          {/* Lines */}
+          <span className="flex flex-col gap-[5px] items-end">
+            <span
+              className={`block h-[1.5px] rounded-full transition-all duration-[350ms] ease-[cubic-bezier(0.23,1,0.32,1)]
+      ${open ? "w-5 translate-y-[6.5px] rotate-45 bg-accent" : "w-5 bg-white"}`}
+            />
+            <span
+              className={`block h-[1.5px] rounded-full transition-all duration-[350ms] ease-[cubic-bezier(0.23,1,0.32,1)]
+      ${open ? "w-0 opacity-0 bg-transparent" : "w-3.5 bg-white group-hover:w-5"}`}
+            />
+            <span
+              className={`block h-[1.5px] rounded-full transition-all duration-[350ms] ease-[cubic-bezier(0.23,1,0.32,1)]
+      ${open ? "w-5 -translate-y-[6.5px] -rotate-45 bg-accent" : "w-5 bg-white"}`}
+            />
+          </span>
         </button>
       </nav>
 
@@ -98,7 +119,7 @@ export default function Navbar() {
           <Link
             href="#join"
             onClick={() => setOpen(false)}
-            className="font-mono text-xs tracking-widest uppercase bg-gold text-zinc-950 px-5 py-3 text-center font-medium"
+            className="font-mono text-xs tracking-widest uppercase bg-accent text-zinc-950 px-5 py-3 text-center font-medium"
           >
             Join the Lab →
           </Link>

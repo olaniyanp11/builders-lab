@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const links = [
@@ -13,21 +14,23 @@ export default function Footer() {
     <footer className="bg-zinc-950 border-t border-white/5 py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
-
           {/* Brand */}
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <div className="flex items-center gap-2.5">
-              <div className="w-6 h-6 border border-gold/60 rotate-45 flex items-center justify-center">
-                <div className="w-2 h-2 bg-gold rotate-0" />
-              </div>
-              <span className="font-display font-bold text-sm tracking-widest uppercase text-white">
-                Builders <span className="text-gold">Core</span> Academy
-              </span>
+          <Link href="/" className="flex items-center gap-2  group">
+            <div className="relative w-10 h-10">
+              <Image
+                fill
+                alt="logo"
+                src={"/images/career-logo.png"}
+                className="object-contain"
+              />
             </div>
-            <span className="font-mono text-[10px] tracking-widest uppercase text-zinc-600">
-              by CareerBuild Studio
+            {/* <div className="w-7 h-7 border border-gold/60 rotate-45 flex items-center justify-center group-hover:border-gold transition-colors">
+            <div className="w-2.5 h-2.5 bg-gold rotate-0" />
+          </div> */}
+            <span className="font-display font-700 text-sm tracking-widest uppercase text-white">
+              Builders <span className="text-gold">Core</span> Academy
             </span>
-          </div>
+          </Link>
 
           {/* Nav */}
           <ul className="flex flex-wrap items-center justify-center gap-6">
