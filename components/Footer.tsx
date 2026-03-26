@@ -20,7 +20,7 @@ export default function Footer() {
               <Image
                 fill
                 alt="logo"
-                src={"/images/career-logo.png"}
+                src={"/images/career-logo.PNG"}
                 className="object-contain"
               />
             </div>

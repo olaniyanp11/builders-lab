@@ -1,6 +1,4 @@
-import React from 'react'
-
-const Loading = () => {
+export default function Loading(){
   return (
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-zinc-950 overflow-hidden">
       {/* Subtle grid background */}
@@ -107,6 +105,5 @@ const Loading = () => {
       `}</style>
     </div>
   );
-}
+};
 
-export default Loading
