@@ -35,10 +35,10 @@ export default function Hero() {
       />
 
       {/* Radial gradient glow — shifted left to complement text side */}
-      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-gold/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-accent/5 blur-[120px] pointer-events-none" />
 
       {/* Right-side image glow */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gold/[0.07] blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent/[0.07] blur-[100px] pointer-events-none" />
 
       <div
         ref={ref}
@@ -53,8 +53,8 @@ export default function Hero() {
               data-reveal
               className="flex items-center gap-3 mb-8 opacity-0 translate-y-5 transition-all duration-700 ease-out"
             >
-              <div className="h-px w-10 bg-gold" />
-              <span className="font-mono text-[11px] tracking-[0.25em] uppercase text-gold">
+              <div className="h-px w-10 bg-accent" />
+              <span className="font-mono text-[11px] tracking-[0.25em] uppercase text-accent">
                 By CareerBuild Studio
               </span>
             </div>
@@ -65,7 +65,7 @@ export default function Hero() {
               className="font-display font-extrabold text-[clamp(48px,7vw,108px)] leading-[0.92] tracking-tight opacity-0 translate-y-6 transition-all duration-700 ease-out mb-6"
             >
               <span className="block text-white">THE</span>
-              <span className="block text-gold">BUILDERS</span>
+              <span className="block text-accent">BUILDERS</span>
               <span className="block text-white">LAB.</span>
             </h1>
 
@@ -88,13 +88,13 @@ export default function Hero() {
             >
               <Link
                 href="#join"
-                className="inline-flex items-center gap-2 font-mono text-[12px] tracking-widest uppercase bg-gold text-zinc-950 px-8 py-4 font-medium hover:bg-gold-light transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(201,168,76,0.35)]"
+                className="inline-flex items-center gap-2 font-mono text-[12px] tracking-widest uppercase bg-accent text-zinc-950 px-8 py-4 font-medium hover:bg-accent-light transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(201,168,76,0.35)]"
               >
                 Start Building <FaArrowRight />
               </Link>
               <Link
                 href="#departments"
-                className="font-mono text-[12px] tracking-widest uppercase border border-white/10 text-white px-8 py-4 hover:border-gold/40 hover:bg-white/[0.03] transition-all duration-200"
+                className="font-mono text-[12px] tracking-widest uppercase border border-white/10 text-white px-8 py-4 hover:border-accent/40 hover:bg-white/[0.03] transition-all duration-200"
               >
                 Explore Departments
               </Link>
@@ -111,7 +111,7 @@ export default function Hero() {
                 { num: "∞", label: "Execution Potential" },
               ].map((s) => (
                 <div key={s.label} className="flex flex-col gap-1">
-                  <span className="font-display font-extrabold text-4xl text-gold leading-none">
+                  <span className="font-display font-extrabold text-4xl text-accent leading-none">
                     {s.num}
                   </span>
                   <span className="font-mono text-[10px] tracking-widest uppercase text-zinc-500">
@@ -131,7 +131,7 @@ export default function Hero() {
             <div className="absolute -top-4 -left-4 w-16 h-16 border-t border-l border-accent pointer-events-none" />
             <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b border-r border-accent pointer-events-none" />
             
-            {/* Gold accent bar */}
+            {/* accent accent bar */}
             <div className="absolute left-0 top-8 bottom-8 w-[2px] bg-gradient-to-b from-transparent via-accent to-transparent" />
 
             {/* Image container */}
@@ -147,21 +147,21 @@ export default function Hero() {
                 }}
               />
 
-              {/* Gold tint overlay */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-zinc-950/60 via-transparent to-gold/10 mix-blend-multiply pointer-events-none" />
+              {/* accent tint overlay */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-zinc-950/60 via-transparent to-accent/10 mix-blend-multiply pointer-events-none" />
 
               {/* Bottom caption badge */}
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
                 <div className="flex flex-col gap-0.5">
-                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-gold">
+                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-accent">
                     Cohort {new Date().toLocaleDateString()}
                   </span>
                   <span className="font-display font-bold text-white text-sm leading-tight">
                     Build. Ship. Scale.
                   </span>
                 </div>
-                <div className="w-8 h-8 border border-gold/50 flex items-center justify-center">
-                  <div className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+                <div className="w-8 h-8 border border-accent/50 flex items-center justify-center">
+                  <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
                 </div>
               </div>
             </div>
