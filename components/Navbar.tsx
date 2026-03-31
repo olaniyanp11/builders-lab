@@ -36,7 +36,7 @@ export default function Navbar() {
             <Image
               fill
               alt="logo"
-              src={"/images/career-logo.PNG"}
+              src={"/images/logo.jpeg"}
               className="object-contain"
             />
           </div>

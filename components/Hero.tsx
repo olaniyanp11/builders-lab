@@ -66,7 +66,8 @@ export default function Hero() {
             >
               <span className="block text-white">THE</span>
               <span className="block text-accent">BUILDERS</span>
-              <span className="block text-white">LAB.</span>
+              <span className="block text-white">CORE.</span>
+              <span className="block text-white">ACADEMY.</span>
             </h1>
 
             {/* Subline */}
